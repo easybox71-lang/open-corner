@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- v3.0.4：提前和图片/视频所在的 Supabase Storage 建连，省掉每张图一次 DNS+TLS 握手 -->
+<!-- v3.0.5：提前和图片/视频所在的 Supabase Storage 建连，省掉每张图一次 DNS+TLS 握手 -->
 <link rel="preconnect" href="https://pjfwkylyeiaymwajtztt.supabase.co" crossorigin>
 <link rel="dns-prefetch" href="https://pjfwkylyeiaymwajtztt.supabase.co">
 <style id="preBootCss">
@@ -227,7 +227,7 @@ document.addEventListener('focusout', function(e){ hideTip(); }, true);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#2563eb">
-<title>Open Corner · 小论坛 v3.0.4（个人信息公开卡 · 首进随机昵称 · 轻量单文件 / 公告实时互通·全文展开 / 全输入框敏感词检测 / 账号凭证保护）</title>
+<title>Open Corner · 小论坛 v3.0.5（个人信息公开卡 · 首进随机昵称 · 轻量单文件 / 公告实时互通·全文展开 / 全输入框敏感词检测 / 账号凭证保护）</title>
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 <style>
 :root{
@@ -265,9 +265,11 @@ header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(255,25
 .side-item{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;color:var(--sub);font-size:14px;font-weight:600;margin-bottom:3px;border:0;background:none;width:100%;text-align:left}
 .side-item:hover{background:#f8fafc}.side-item.active{background:var(--primary-soft);color:var(--primary)}
 .sidebar-tip{margin-top:14px;padding:12px;border-radius:11px;background:#f8fafc;color:var(--muted);font-size:12px;line-height:1.55}
-/* v2.5.3 公告：默认折叠 3 行；展开全文 / 详情弹窗双入口保证所有人都能看到完整内容 */
-.notice-clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;word-break:break-word;white-space:pre-wrap}
-.notice-clamp.expanded{-webkit-line-clamp:unset;overflow:visible}
+/* v3.0.5 公告：放得下就完整显示；放不下就预览 3 行 + 一个「🔎 查看详情」，点了进弹窗看全文。
+   判定不看字数、只用真实渲染高度，所以任何屏幕宽度、任何公告长度都不会出现"点了没变化"。
+   展开前后公告卡高度完全一致（都在 3 行位置），不会把下面的内容挤来挤去。 */
+.notice-clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  overflow-wrap:anywhere;word-break:break-word;white-space:pre-wrap;font-size:13px;color:var(--sub);margin-top:3px;line-height:1.75}
 .notice-ops{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .notice-link{color:#1d4ed8;font-size:12px;font-weight:700;cursor:pointer;user-select:none;background:rgba(37,99,235,.09);border-radius:7px;padding:4px 10px}
 .notice-link:active{opacity:.7}
@@ -329,7 +331,7 @@ textarea::placeholder{color:#a8b2c1}
 .inline-play-video{width:100%;max-width:320px;aspect-ratio:1;object-fit:contain;background:#000;border-radius:11px;display:block;cursor:default}
 .media-more{font-size:12px;color:var(--muted);background:#f8fafc;border:1px dashed var(--border);border-radius:9px;padding:7px 11px;margin:-4px 0 12px}
 .image-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
-/* v3.0.4：hover 放大只在真有鼠标的设备上生效。iPad/iPhone 点一下会“粘住”hover，
+/* v3.0.5：hover 放大只在真有鼠标的设备上生效。iPad/iPhone 点一下会“粘住”hover，
    图片被 scale(1.05) 后又被 overflow:hidden 裁掉一圈，看起来就是“图只显示了一半” */
 @media(hover:hover) and (pointer:fine){.image-item:hover img{transform:scale(1.05)}}
 .actions{border-top:1px solid #f1f5f9;padding-top:10px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
@@ -734,9 +736,9 @@ textarea{caret-color:var(--primary)}.toolbar .select,.search-input,.comment-inpu
 .action{transition:background-color .18s ease,color .18s ease,transform .22s var(--ease-spring)}.action:active,.mini:active,.sort-btn:active,.tab:active{transform:scale(.98)}
 .post-head .avatar,.comment-avatar{box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
 .image-item{background:#edf2f8;contain:paint}
-/* v3.0.4：iOS Safari 的 contain:paint 会让内部的 <video> 渲染成纯黑（画面不出来、控制条正常），视频格必须关掉 */
+/* v3.0.5：iOS Safari 的 contain:paint 会让内部的 <video> 渲染成纯黑（画面不出来、控制条正常），视频格必须关掉 */
 .image-item.media-video{contain:none}
-/* v3.0.4：视频加载/缓冲提示，压在画面上，不挡控制条 */
+/* v3.0.5：视频加载/缓冲提示，压在画面上，不挡控制条 */
 .image-item.video-playing{position:relative;overflow:visible;border-radius:0}
 /* 圆角改由 video 自己画：iOS Safari 里 overflow:hidden 的祖先会把 video 那一层直接裁掉（黑屏） */
 .image-item.video-playing video{border-radius:11px}
@@ -776,7 +778,7 @@ textarea{caret-color:var(--primary)}.toolbar .select,.search-input,.comment-inpu
 /* ===== 帖子详情页（全屏） ===== */
 .detail-overlay{position:fixed;inset:0;z-index:980;background:var(--bg);display:flex;justify-content:center;align-items:stretch;transition:opacity .22s ease}
 .detail-overlay.hide{display:none}
-/* v3.0.4：动画原本是 fill-mode:both，结束后 transform:translateY(0) 会一直留着，
+/* v3.0.5：动画原本是 fill-mode:both，结束后 transform:translateY(0) 会一直留着，
    等于给整页套了一个永久合成层——iOS Safari 里其中的 <video> 就只黑屏不画画面。
    改成 none：动画照样播，播完回到无 transform 的普通层。 */
 .detail-sheet{position:relative;width:100%;max-width:620px;height:100%;display:flex;flex-direction:column;background:var(--bg);animation:detail-slide .26s var(--ease-out) none}
@@ -1213,7 +1215,7 @@ input,textarea,select{caret-color:var(--primary)}
       <div class="notice">
         <div class="notice-head"><strong>📢 Open Corner 公告</strong><span class="notice-link hide" id="noticeEdit">✏️ 编辑</span></div>
         <p class="notice-clamp" id="noticeText">Open Corner 是个小地方，欢迎路过的人。发言请自持：不贴他人真实信息、不追着人骂、广告只发二手区。</p>
-        <div class="notice-ops"><span class="notice-link hide" id="noticeMore">📄 展开全文</span><span class="notice-link hide" id="noticeFullBtn">🔍 查看详情</span></div>
+        <div class="notice-ops"><span class="notice-link hide" id="noticeFullBtn">🔎 查看详情</span></div>
       </div>
 
       <div class="card publish-card">
@@ -1413,7 +1415,7 @@ input,textarea,select{caret-color:var(--primary)}
     <h3>🏫 关于 Open Corner</h3>
     <div class="tip">一个开放的小角落：不限学校、不限身份，人不多，但话都算话。</div>
     <p style="line-height:1.8;color:var(--sub);font-size:14px;margin:14px 0">Open Corner 不追求做成大平台：没有推荐算法，也不推热门，帖子按时间排，谁发都能被看见。这里不收门票，也不分身份，你来自哪里、做什么都不重要——只要别拿别人的隐私和尊严当话题。</p>
-    <div class="tip" style="margin-top:10px">当前版本 <b>v3.0.4</b>：修好了「视频只黑屏不播」和「图片加载慢」——视频格取消了会吃掉画面的 <code>contain:paint</code>，详情页容器不再常驻 transform 合成层，播放器改成点了就按需加载并显示「加载中 / 缓冲中」；发帖视频超过 4.5MB 会自动压到 720p 约 2.4MB，别人点开基本一两秒就能看。<br>图片改成先用小缩略图秒出、空闲时再换高清原图，并且在触屏设备上关掉了会「把图裁掉一圈」的悬停放大。<br>v3.0.3 修好了「修改资料」弹窗滑不动的问题——滚动改由弹窗卡片整体承担，底部按钮吸底常驻，iPad / iPhone / 桌面都能正常上下滑。<br>v3.0.2 起个人资料新增「个人信息卡」——性别、生日、年龄、星座、工作状态、学校，每一项都能单独选择是否对外展示，公开后显示在帖子作者名旁、个人主页和简介下方；没打开展示的项别人看不到。<br>首次进入会自动分配一个随机昵称（例如「路过的人1234」），随时可在「修改资料」里改，改过之后不会被覆盖。<br>管理员后台、举报与惩罚、公告实时互通、敏感词检测（覆盖每个文本输入框，命中整词替换为 ***）全部保留，逻辑与数据未改动。<br>账号凭证照旧：登录密码只生成一次、只读不改；「重新读取凭证」有读取中 / 成功 / 失败三态提示。<br>找回账号用的派生邮箱域已换为 opencorner.forum.app，同时兼容旧域，老账号不受影响。</div>
+    <div class="tip" style="margin-top:10px">当前版本 <b>v3.0.5</b>：公告不再折叠——正文永远完整显示，页面里不再有「展开全文 / 查看详情」两个按钮；公告超过 5 行时正文自己变成一个可滚动的小窗口，底部有一道渐隐提示还能往下看，不会再出现「点了没变化」。<br>v3.0.4 修好了「视频只黑屏不播」和「图片加载慢」——视频格取消了会吃掉画面的 <code>contain:paint</code>，详情页容器不再常驻 transform 合成层，播放器改成点了就按需加载并显示「加载中 / 缓冲中」；发帖视频超过 4.5MB 会自动压到 720p 约 2.4MB，别人点开基本一两秒就能看。<br>图片改成先用小缩略图秒出、空闲时再换高清原图，并且在触屏设备上关掉了会「把图裁掉一圈」的悬停放大。<br>v3.0.3 修好了「修改资料」弹窗滑不动的问题——滚动改由弹窗卡片整体承担，底部按钮吸底常驻，iPad / iPhone / 桌面都能正常上下滑。<br>v3.0.2 起个人资料新增「个人信息卡」——性别、生日、年龄、星座、工作状态、学校，每一项都能单独选择是否对外展示，公开后显示在帖子作者名旁、个人主页和简介下方；没打开展示的项别人看不到。<br>首次进入会自动分配一个随机昵称（例如「路过的人1234」），随时可在「修改资料」里改，改过之后不会被覆盖。<br>管理员后台、举报与惩罚、公告实时互通、敏感词检测（覆盖每个文本输入框，命中整词替换为 ***）全部保留，逻辑与数据未改动。<br>账号凭证照旧：登录密码只生成一次、只读不改；「重新读取凭证」有读取中 / 成功 / 失败三态提示。<br>找回账号用的派生邮箱域已换为 opencorner.forum.app，同时兼容旧域，老账号不受影响。</div>
     <div class="modal-actions"><button class="secondary" id="closeAbout">关闭</button></div>
   </div>
 </div>
@@ -1451,8 +1453,8 @@ input,textarea,select{caret-color:var(--primary)}
 
 <div class="modal-mask hide" id="noticeModal">
   <div class="modal">
-    <h3>📢 通报详情</h3>
-    <div id="noticeFull" style="white-space:pre-wrap;word-break:break-word;max-height:60vh;max-height:min(70dvh,620px);overflow:auto;-webkit-overflow-scrolling:touch;font-size:14px;line-height:1.75;color:#334155"></div>
+    <h3>📢 公告详情</h3>
+    <div id="noticeFull" style="white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;max-height:60vh;max-height:min(70dvh,620px);overflow:auto;-webkit-overflow-scrolling:touch;font-size:14px;line-height:1.75;color:#334155"></div>
     <div class="modal-actions"><button class="secondary" id="noticeClose">关闭</button></div>
   </div>
 </div>
@@ -2275,7 +2277,7 @@ async function init(){
 // 现在：① 原地展开 + 详情弹窗双入口，长度兜底保证入口一定出现；
 //       ② 独立 5 秒轮询 + 切回前台立即同步 + Realtime 订阅，三层保证别人不用刷新。
 let noticeRow=null,curNotice='',noticeSig='',noticeRendered=false;
-let noticeRO=null,noticeTimer=null,noticeSyncing=false,noticeWired=false;
+let noticeTimer=null,noticeSyncing=false,noticeWired=false;
 
 function noticeDefault(){return 'Open Corner 是个小地方，欢迎路过的人。发言请自持：不贴他人真实信息、不追着人骂、广告只发二手区。';}
 function noticeText(){return clean(curNotice||noticeDefault());}
@@ -2288,11 +2290,12 @@ async function loadNotice(){
       const row=data[0];
       const sig=row.content+'|'+(row.updated_at||'')+'|'+(row.id||'');
       noticeRow=row;curNotice=row.content;
-      // 只在内容真的变化时重渲染，避免每 5 秒把别人正在展开的全文收回去
+      // v3.0.5：内容变化时重渲染（正文永远是完整文本，折叠与否只由 fitNotice 按真实高度决定）
       if(sig!==noticeSig||!noticeRendered){noticeSig=sig;noticeRendered=true;renderNotice();}
     }else if(!noticeRendered){noticeRendered=true;renderNotice();}
   }catch(e){if(!noticeRendered){noticeRendered=true;renderNotice();}}
   wireNoticeUI();
+  fitNotice();          // 字体加载完 / 宽度变化后，重新判断这次放不放得下
   startNoticeSync();
 }
 async function syncNotice(){
@@ -2304,58 +2307,50 @@ function startNoticeSync(){
   // 不依赖登录与 Realtime 连接：页面开着就同步，后台自动暂停、切回前台立即补一次
   noticeTimer=setInterval(()=>{if(!document.hidden)syncNotice()},5000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncNotice()});
+  // v3.0.5：横竖屏切换 / 窗口缩放后，公告可能从"放得下"变成"放不下"，重新判断一次
+  let rt=null;
+  window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(fitNotice,180)});
 }
-// 可靠判断是否被截断：先强制 clamp 记高度，再临时展开取全文高度。
-// 比只比 scrollHeight/clientHeight 稳（部分 WebKit 在 clamp 下两者相等）。
-function noticeClipped(box){
-  try{
-    const was=box.classList.contains('expanded');
-    box.classList.remove('expanded');
-    const h1=box.clientHeight;
-    box.classList.add('expanded');
-    const h2=box.scrollHeight;
-    if(!was)box.classList.remove('expanded');
-    return h2>h1+2;
-  }catch(e){return false}
+// v3.0.5：公告只有两种状态
+//   · 放得下  → 完整显示，不出现任何按钮；
+//   · 放不下  → 预览 3 行 + 「🔎 查看详情」，点了进弹窗看全文。
+// 判定只看真实渲染高度（不限高时的 scrollHeight vs 3 行高度），不看字数、不看换行数，
+// 所以桌面宽屏的短公告不会被硬折，手机上也不会出现"点了没变化"。
+const NOTICE_PREVIEW_LINES = 3;
+function noticeNeedsMore(box){
+  // 不用「去掉 class 再量」——那会改变 display（-webkit-box → block），连带外边距行为一起变，
+  // 量出来的高度不可信（实测 4 行公告会量成 62px，误判成"放得下"）。
+  // 改为：临时解除 line-clamp（display 仍是 -webkit-box），量出全文高度，立刻恢复。
+  const lh=parseFloat(getComputedStyle(box).lineHeight)||22;
+  const prevClamp=box.style.webkitLineClamp;
+  const prevOverflow=box.style.overflow;
+  box.style.webkitLineClamp='unset';
+  box.style.overflow='visible';
+  const full=box.scrollHeight;
+  box.style.webkitLineClamp=prevClamp;
+  box.style.overflow=prevOverflow;
+  return full > Math.round(lh*NOTICE_PREVIEW_LINES)+2;
+}
+function fitNotice(){
+  const box=$('noticeText');if(!box)return;
+  const more=$('noticeFullBtn');
+  const need=noticeNeedsMore(box);
+  if(more)more.classList.toggle('hide',!need);
+  return need;
 }
 function renderNotice(){
   const box=$('noticeText');if(!box)return;
-  const txt=noticeText();
-  const wasExpanded=box.classList.contains('expanded');
-  box.textContent=txt;
+  box.textContent=noticeText();
   const eb=$('noticeEdit');if(eb)eb.classList.toggle('hide',!isAdmin());
   // 弹窗开着时同步最新内容（公告被别人改了也能立刻看到新版本）
   const modal=$('noticeModal');
-  if(modal&&!modal.classList.contains('hide'))$('noticeFull').textContent=txt;
-  const measure=()=>{
-    // 长度兜底：即使真机上 clamp 测量失效，长公告 / 多行公告也一定给出全文入口
-    const need=noticeClipped(box)||txt.length>45||txt.split('\n').length>3;
-    const more=$('noticeMore'),full=$('noticeFullBtn');
-    if(more){more.classList.toggle('hide',!need);more.textContent=box.classList.contains('expanded')?'🔼 收起':'📄 展开全文';}
-    if(full)full.classList.toggle('hide',!need);
-  };
-  if(wasExpanded)box.classList.add('expanded');   // 实时更新后保留用户的展开状态
-  if(box.clientHeight===0){
-    if(!noticeRO){
-      noticeRO=new ResizeObserver(()=>{if(box.clientHeight>0){noticeRO.disconnect();noticeRO=null;measure();}});
-      noticeRO.observe(box);
-    }
-  }else{
-    requestAnimationFrame(measure);
-  }
-  measure();   // 立即测一次，不依赖 rAF（后台标签页 rAF 会被暂停）
+  if(modal&&!modal.classList.contains('hide'))$('noticeFull').textContent=noticeText();
+  fitNotice();
 }
 function wireNoticeUI(){
   if(noticeWired)return;noticeWired=true;
-  const more=$('noticeMore'),full=$('noticeFullBtn'),edit=$('noticeEdit');
-  // 入口①：原地展开全文（不用弹窗、不用在小窗口里滚，任何人都能看完整内容）
-  if(more)more.onclick=()=>{
-    const box=$('noticeText');if(!box)return;
-    const exp=!box.classList.contains('expanded');
-    box.classList.toggle('expanded',exp);
-    more.textContent=exp?'🔼 收起':'📄 展开全文';
-  };
-  // 入口②：详情弹窗（内容区可滚动，2000 字也能看全）
+  const edit=$('noticeEdit'),full=$('noticeFullBtn');
+  // v3.0.5：唯一入口「🔎 查看详情」→ 弹窗看全文（弹窗内容区可滚动，2000 字也看得全）
   if(full)full.onclick=()=>{$('noticeFull').textContent=noticeText();$('noticeModal').classList.remove('hide')};
   const nm=$('noticeModal');
   if(nm)nm.onclick=e=>{if(e.target===nm)nm.classList.add('hide')};
@@ -3568,7 +3563,7 @@ async function handlePostVideo(file){
   let dur=0;try{dur=await probeVideoDuration(file)||0}catch(e){}
   if(dur>60.5)throw new Error('视频最长 1 分钟，请截取 60 秒内的片段再发');
   let blob=file;
-  // v3.0.4：以前只有 >45MB 才压，10MB 的 iPhone 原片就直接传上去了——校园网 + iPad 上下载要十几秒，
+  // v3.0.5：以前只有 >45MB 才压，10MB 的 iPhone 原片就直接传上去了——校园网 + iPad 上下载要十几秒，
   // 用户看到的就是"黑屏、时长 -:--、点了没反应"。现在超过 4.5MB 一律压到 720p / 约 2.4MB。
   if(file.size>4.5e6){
     try{
@@ -3660,7 +3655,7 @@ async function compressVideoInner(file,maxSec=60,targetBytes=2.4e6){
     const dur0=v.duration&&isFinite(v.duration)?v.duration:maxSec;
     const dur=Math.min(dur0,maxSec);
     // v2.1.1：码率按时长自适应——长视频自动降码率，保证总大小 ~2.4MB 内（base64 后仍在入库安全线）
-    // v3.0.4：下限从 600k 降到 400k，否则 45~60 秒的视频怎么压都还有 3.5MB 以上
+    // v3.0.5：下限从 600k 降到 400k，否则 45~60 秒的视频怎么压都还有 3.5MB 以上
     const vbr=Math.max(400000,Math.min(2000000,Math.round(targetBytes*8/(dur0||20))));
     const rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:vbr,audioBitsPerSecond:64000});
     const chunks=[];
@@ -3849,7 +3844,7 @@ function playThumbVideo(el){
   const v=document.createElement('video');
   v.src=full;if(poster)v.poster=poster;
   v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');
-  // v3.0.4：用户已经点了播放，就别再抠那点流量。preload=metadata 在 iOS 上经常只拿到控制条、拿不到画面，
+  // v3.0.5：用户已经点了播放，就别再抠那点流量。preload=metadata 在 iOS 上经常只拿到控制条、拿不到画面，
   // 表现就是"一片黑 + 时长 -:--"。改成 auto 让浏览器按需把首段缓冲下来。
   v.preload='auto';v.autoplay=true;
   const tip=document.createElement('div');tip.className='video-load-tip';tip.textContent='视频加载中…';
@@ -3873,7 +3868,7 @@ function playThumbVideo(el){
   }else{
     v.className='inline-play-video';el.replaceWith(v);
   }
-  // v3.0.4：自动播放被系统拦下时（低电量模式等）不要留个黑框干等，直接告诉用户点哪
+  // v3.0.5：自动播放被系统拦下时（低电量模式等）不要留个黑框干等，直接告诉用户点哪
   try{const p=v.play();if(p&&p.catch)p.catch(()=>{tip.style.display='';tip.textContent='点一下画面开始播放'})}catch(e){}
 }
 function followLabel(uid){
@@ -4070,7 +4065,7 @@ function renderDetail(p){
       </div>
     </div>
   </div>`;
-  // v3.0.4：详情页首图取消 lazy（Safari 会把懒加载图推迟到空闲/滚动后才请求），并给最高优先级
+  // v3.0.5：详情页首图取消 lazy（Safari 会把懒加载图推迟到空闲/滚动后才请求），并给最高优先级
   const fi=$('detailBody').querySelector('.image-item img');
   if(fi){fi.loading='eager';fi.setAttribute('fetchpriority','high');}
 }
